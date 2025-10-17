@@ -11,6 +11,6 @@ public static class LinkerInclude
     public static void Include()
     {
         //todo bug with aot linking
-        _ = ComponentDescriptor.Impl<IViewManager, IApiProviderComponent<IViewManager>, BindingBuilderRequest<InlineObjectTuple>>.EmptyInstance;
+        // _ = ComponentDescriptor.Impl<IViewManager, IApiProviderComponent<IViewManager>, BindingBuilderRequest<InlineObjectTuple>>.EmptyInstance;
     }
 }
