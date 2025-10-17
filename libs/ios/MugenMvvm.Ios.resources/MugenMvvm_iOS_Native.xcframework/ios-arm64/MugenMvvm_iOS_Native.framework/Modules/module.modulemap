@@ -1,0 +1,6 @@
+framework module MugenMvvm_iOS_Native {
+  umbrella header "MugenMvvm_iOS_Native.h"
+  export *
+
+  module * { export * }
+}

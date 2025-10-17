@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeAOT.Android", "NativeAOT.Android\NativeAOT.Android.csproj", "{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeAOT.Core", "NativeAOT.Core\NativeAOT.Core.csproj", "{2AB944C0-4188-4BE2-B4B6-4F389AB95B61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeAOT.iOS", "NativeAOT.iOS\NativeAOT.iOS.csproj", "{5257F8B1-6427-4EC5-9BAF-55AFE52F7184}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50FBF9B-5C3D-4D2B-9C27-626DFD0A7C49}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2AB944C0-4188-4BE2-B4B6-4F389AB95B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB944C0-4188-4BE2-B4B6-4F389AB95B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB944C0-4188-4BE2-B4B6-4F389AB95B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB944C0-4188-4BE2-B4B6-4F389AB95B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5257F8B1-6427-4EC5-9BAF-55AFE52F7184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5257F8B1-6427-4EC5-9BAF-55AFE52F7184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5257F8B1-6427-4EC5-9BAF-55AFE52F7184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5257F8B1-6427-4EC5-9BAF-55AFE52F7184}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

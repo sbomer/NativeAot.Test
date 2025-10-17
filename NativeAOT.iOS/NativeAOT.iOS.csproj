@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-ios</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <SupportedOSPlatformVersion>16.0</SupportedOSPlatformVersion>
+        <TrimmerSingleWarn>false</TrimmerSingleWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <PublishAot>true</PublishAot>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="MugenMvvm">
+            <HintPath>..\libs\ios\MugenMvvm.dll</HintPath>
+        </Reference>
+        <Reference Include="MugenMvvm.Android">
+            <HintPath>..\libs\ios\MugenMvvm.Ios.dll</HintPath>
+        </Reference>
+        <Reference Include="MugenMvvm.CompositeUI">
+            <HintPath>..\libs\ios\MugenMvvm.CompositeUI.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\NativeAOT.Core\NativeAOT.Core.csproj" />
+    </ItemGroup>
+</Project>

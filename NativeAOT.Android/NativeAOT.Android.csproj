@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
+        <OutputType>Exe</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <ApplicationId>com.companyname.NativeAOT.Android</ApplicationId>
+        <ApplicationVersion>1</ApplicationVersion>
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <TrimmerSingleWarn>false</TrimmerSingleWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <EnablePreviewFeatures>true</EnablePreviewFeatures>
+        <AndroidAllowExperimentalRuntime>true</AndroidAllowExperimentalRuntime>
+        <PublishAot>true</PublishAot>
+        <UseMonoRuntime>false</UseMonoRuntime>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Xamarin.AndroidX.Core" Version="1.17.0" />
+        <PackageReference Include="Xamarin.AndroidX.SwipeRefreshLayout" Version="1.1.0.29" />
+        <PackageReference Include="Xamarin.Google.Android.Material" Version="1.12.0.5" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="MugenMvvm">
+            <HintPath>..\libs\android\MugenMvvm.dll</HintPath>
+        </Reference>
+        <Reference Include="MugenMvvm.Android">
+            <HintPath>..\libs\android\MugenMvvm.Android.dll</HintPath>
+        </Reference>
+        <Reference Include="MugenMvvm.CompositeUI">
+            <HintPath>..\libs\android\MugenMvvm.CompositeUI.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\NativeAOT.Core\NativeAOT.Core.csproj" />
+    </ItemGroup>
+</Project>

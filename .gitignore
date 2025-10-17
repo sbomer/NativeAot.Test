@@ -52,3 +52,17 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Jetbrains Generated Files
+/.idea/
+**/.idea/
+
+DerivedData
+*.xcworkspace
+!default.xcworkspace
+
+## User settings
+xcuserdata/
+
+# Mac OS specific files
+.DS_Store

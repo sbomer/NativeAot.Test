@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net10.0-android;net10.0-ios</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+        <Reference Include="MugenMvvm">
+            <HintPath>..\libs\android\MugenMvvm.dll</HintPath>
+        </Reference>
+        <Reference Include="MugenMvvm.CompositeUI">
+            <HintPath>..\libs\android\MugenMvvm.CompositeUI.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+        <Reference Include="MugenMvvm">
+            <HintPath>..\libs\ios\MugenMvvm.dll</HintPath>
+        </Reference>
+        <Reference Include="MugenMvvm.CompositeUI">
+            <HintPath>..\libs\ios\MugenMvvm.CompositeUI.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Analyzer Include="..\libs\MugenMvvm.SourceGenerator.dll" />
+    </ItemGroup>
+
+</Project>
