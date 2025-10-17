@@ -9,6 +9,8 @@
         <ApplicationVersion>1</ApplicationVersion>
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
         <TrimmerSingleWarn>false</TrimmerSingleWarn>
+        <IlcGenerateDgmlFile>true</IlcGenerateDgmlFile>
+        <IlcGenerateMstatFile>true</IlcGenerateMstatFile>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
