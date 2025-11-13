@@ -1,0 +1,20 @@
+Process terminated.
+Assertion failed.
+false
+   at ILCompiler.ILScanResults.ScannedVTableProvider.GetSlice(TypeDesc type) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/ILScanner.cs:line 333
+   at ILCompiler.DependencyAnalysis.NodeFactory.VTableSliceHashtable.CreateValueFromKey(TypeDesc key) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/DependencyAnalysis/NodeFactory.cs:line 1005
+   at Internal.TypeSystem.LockFreeReaderHashtable`2.CreateValueAndEnsureValueIsInTable(TKey key) in /home/sven/src/runtime2/src/coreclr/tools/Common/TypeSystem/Common/Utilities/LockFreeReaderHashtable.cs:line 562
+   at ILCompiler.DependencyAnalysis.NodeFactory.VTable(TypeDesc type) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/DependencyAnalysis/NodeFactory.cs:line 1015
+   at ILCompiler.DependencyAnalysis.ConstructedEETypeNode.ComputeNonRelocationBasedDependencies(NodeFactory factory) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/DependencyAnalysis/ConstructedEETypeNode.cs:line 58
+   at ILCompiler.DependencyAnalysis.ObjectNode.GetStaticDependencies(NodeFactory factory) in /home/sven/src/runtime2/src/coreclr/tools/Common/Compiler/DependencyAnalysis/ObjectNode.cs:line 58
+   at ILCompiler.DependencyAnalysisFramework.DependencyAnalyzer`2.GetStaticDependenciesImpl(DependencyNodeCore`1 node) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.DependencyAnalysisFramework/DependencyAnalyzer.cs:line 182
+   at ILCompiler.DependencyAnalysisFramework.DependencyAnalyzer`2.GetStaticDependencies(DependencyNodeCore`1 node) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.DependencyAnalysisFramework/DependencyAnalyzer.cs:line 222
+   at ILCompiler.DependencyAnalysisFramework.DependencyAnalyzer`2.ProcessMarkStack() in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.DependencyAnalysisFramework/DependencyAnalyzer.cs:line 257
+   at ILCompiler.DependencyAnalysisFramework.DependencyAnalyzer`2.ComputeMarkedNodes() in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.DependencyAnalysisFramework/DependencyAnalyzer.cs:line 308
+   at ILCompiler.RyuJitCompilation.CompileInternal(String outputFile, ObjectDumper dumper) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.RyuJit/Compiler/RyuJitCompilation.cs:line 102
+   at ILCompiler.Compilation.ILCompiler.ICompilation.Compile(String outputFile, ObjectDumper dumper) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/Compilation.cs:line 541
+   at ILCompiler.Program.Run() in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler/Program.cs:line 641
+   at ILCompiler.ILCompilerRootCommand.<>c__DisplayClass261_0.<.ctor>b__0(ParseResult result) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler/ILCompilerRootCommand.cs:line 315
+   at System.CommandLine.Invocation.InvocationPipeline.Invoke(ParseResult parseResult)
+   at ILCompiler.Program.Main(String[] args) in /home/sven/src/runtime2/src/coreclr/tools/aot/ILCompiler/Program.cs:line 809
+./ilc.sh: line 6: 3514114 Aborted                    (core dumped) $HOME/src/runtime2/.dotnet/dotnet $HOME/src/runtime2/artifacts/bin/coreclr/linux.x64.Debug/ilc/ilc.dll @obj/Release/net10.0-android/android-x64/native/NativeAOT.Android.ilc.rsp

@@ -25,6 +25,16 @@
         <PackageReference Include="Xamarin.AndroidX.SwipeRefreshLayout" Version="1.1.0.29" />
         <PackageReference Include="Xamarin.Google.Android.Material" Version="1.12.0.5" />
     </ItemGroup>
+
+    <!-- <ItemGroup>
+        <ProjectReference Include="..\decompiled\MugenMvvm\MugenMvvm.csproj" />
+        <ProjectReference Include="..\decompiled\MugenMvvm.Android\MugenMvvm.Android.csproj" />
+        <ProjectReference Include="..\decompiled\MugenMvvm.CompositeUI\MugenMvvm.CompositeUI.csproj" />
+    </ItemGroup> -->
+
+    <ItemGroup>
+    </ItemGroup>
+
     <ItemGroup>
         <Reference Include="MugenMvvm">
             <HintPath>..\libs\android\MugenMvvm.dll</HintPath>

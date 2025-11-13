@@ -17,6 +17,17 @@ if [ ! -d "$ANDROID_NDK_DIRECTORY" ]; then
     exit 1
 fi
 
+# add path to clang from ANDROID_NDK_DIRECTORY
+# There should be clang in the NDK dir, check for it.
+ANDROID_NDK_CLANG_DIRECTORY="$ANDROID_NDK_DIRECTORY/toolchains/llvm/prebuilt/linux-x86_64/bin"
+if [ ! -f "$ANDROID_NDK_CLANG_DIRECTORY/clang" ]; then
+    echo "ERROR: clang not found in $ANDROID_NDK_CLANG_DIRECTORY"
+    exit 1
+fi
+
 dotnet publish -f net10.0-android \
+    NativeAOT.Android \
     -p:AndroidSdkDirectory="$ANDROID_HOME" \
-    -p:AndroidNdkDirectory="$ANDROID_NDK_DIRECTORY"
+    -p:AndroidNdkDirectory="$ANDROID_NDK_DIRECTORY" \
+    -v:normal
+    # -pp:pp.xml
